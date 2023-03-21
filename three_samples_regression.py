@@ -28,6 +28,9 @@ def plot_data():
     plt.ylabel("Sepal length (cm)")
     plt.legend()
     plt.savefig("Setosa_regress.png")
+    plt.clf()
+    # need plt.clf in order to clear the prior plot in preparation for the next one - in lieu of quitting the python environment and loading a new one
+
 
     c = virginica.petal_length_cm
     d = virginica.sepal_length_cm
@@ -40,6 +43,7 @@ def plot_data():
     plt.ylabel("Sepal length (cm)")
     plt.legend()
     plt.savefig("Virginica_regress.png")
+    plt.clf()
 
     x = versicolor.petal_length_cm
     y = versicolor.sepal_length_cm
@@ -52,7 +56,7 @@ def plot_data():
     plt.ylabel("Sepal length (cm)")
     plt.legend()
     plt.savefig("Versicolor_regress.png")
-
+    plt.clf()
 
 if __name__ == '__main__':
     plot_data()
